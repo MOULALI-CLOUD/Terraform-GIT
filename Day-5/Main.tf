@@ -1,16 +1,16 @@
 resource "aws_vpc" "name" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = "10.0.0.0/18"
 
   tags = {
-    Name = "my-vpc"
+    Name = "Final11-vpc"
   }
 }
 
 resource "aws_subnet" "name" {
   vpc_id     = aws_vpc.name.id
-  cidr_block = "10.0.1.0/24"
+  cidr_block = "10.0.1.0/26"
 
   tags = {
-    Name = "my-subnet1"
+    Name = "Final11-subnet1"
   }
 }
